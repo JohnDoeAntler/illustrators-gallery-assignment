@@ -1,0 +1,25 @@
+@keyframes flash {
+    0% {opacity: 0.5;transform: scale(1, 1)}
+    10%{opacity: 1;transform: scale(1.015, 1.015)}
+    15%{opacity: 0.5;}
+    20%{opacity: 1;}
+    100%{opacity: 1;transform: scale(1.02, 1.02)}
+}
+
+@keyframes inflash {
+    0%{transform: scale(1.02, 1.02)}
+    10%{transform: scale(1.005, 1.005)}
+    100% {transform: scale(1, 1)}
+}
+
+.flash{
+    animation-name: inflash;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.flash:hover{
+    animation-name: flash;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}

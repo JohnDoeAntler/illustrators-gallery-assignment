@@ -1,0 +1,47 @@
+html, body{
+    margin: 0px;
+	font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif; 
+}
+
+input{
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif; 
+    text-align: center;
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+input[type="button"], input[type="submit"]{
+    cursor: pointer;
+}
+
+input::placeholder{
+    color: rgba(0, 0, 0, 0.5);
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+::selection {
+    color: white; 
+    background: black;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}

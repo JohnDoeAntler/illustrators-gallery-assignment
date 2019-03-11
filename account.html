@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>ACCOUNT</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="css/default.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="css/click.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="css/particles-js.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="css/initialization.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="css/account.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="css/keyframe.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="css/ease.css" />
+    </head>
+    <body>
+        <!-- container js -->
+        <div id="particles-js" class="ease"></div> 
+        <div id="content" class="ease">         
+            <div id="app-bar">
+                <a href="index.html">
+                    <input id="index-btn" class="flash" type="button" value="INDEX"/>
+                </a>
+                <div id="horizontal-line"></div>
+            </div>
+            <div id="grid-container">
+                <div id="register-img" class="picture-wrapper close ease">
+                    <img class="picture ease" src="image/login.jpg" alt=""/>
+                </div>
+    
+                <div class="vertical-line"></div>
+    
+                <div id="login-img" class="picture-wrapper open ease">
+                    <img class="picture ease" src="image/register.jpg" alt=""/>
+                </div>
+    
+                <div class="vertical-line"></div>
+    
+                <div id="login-form" class="form ease">
+                    <div id="login-panel">
+                        <div class="title">LOGIN FORM</div>
+                        <input type="text"              id="lgn-email"      class="text flash ease"         placeholder="EMAIL"  spellcheck="false"/>
+                        <input type="password"          id="lgn-password"   class="password flash ease"     placeholder="PASSWORD"/>
+                        <div class="btn-group">
+                            <input type="submit"        id="lgn-login"      class="login flash left"        value="LOGIN"/>
+                            <input type="button"        id="lgn-register"   class="register flash right"    value="REGISTER"/>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="vertical-line"></div>
+                
+                <div id="register-form" class="form ease">
+                    <div id="register-panel">
+                        <div class="title">REGISTER FORM</div>
+                        <input type="text"              id="reg-username"   class="text flash ease"         placeholder="USERNAME"  spellcheck="false"/>
+                        <input type="text"              id="reg-email"      class="text flash ease"         placeholder="EMAIL"     spellcheck="false"/>
+                        <input type="password"          id="reg-password"   class="password flash ease"     placeholder="PASSWORD"/>
+                        <input type="password"          id="reg-confirm"    class="password flash ease"     placeholder="CONFIRM"/>
+                        <input type="text"              id="reg-icon"       class="text flash ease"         placeholder="ICON URL"  spellcheck="false"/>
+                        <input type="text"              id="reg-bio"        class="text flash ease"         placeholder="BIO"       spellcheck="false"/>
+                        <div class="btn-group">
+                            <input type="button"        id="reg-register"   class="register flash left"     value="REGISTER"/>
+                            <input type="submit"        id="reg-login"      class="login flash right"       value="LOGIN"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="initialization"></div>
+        <div id="click"></div>
+        <!-- jquery js -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <!-- bodymovin js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.4.2/lottie.min.js"></script>
+        <!-- particle js -->
+        <script src="script/include/particles.min.js"></script>
+        <!-- default js -->
+        <script src="script/default.js"></script>
+        <!-- intitialization js -->
+        <script src="script/initialization.js"></script>
+        <!-- click js -->
+        <script src="script/click.js"></script>
+        <!-- main js -->
+        <script src="script/account.js"></script>
+        <!-- content js-->
+        <script src="script/content.js"></script>
+    </body>
+</html>
