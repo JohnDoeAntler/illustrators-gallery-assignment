@@ -1,6 +1,6 @@
 var animation = [];
 
-["banner", "classes", "notification", "setting"].forEach(x => {
+["banner", "illustrators", "about", "contact"].forEach(x => {
     let tmp = bodymovin.loadAnimation({
         wrapper: document.getElementById(x),
         animType: 'canvas',
@@ -33,11 +33,11 @@ setTimeout(() => {
     $("#content").css("transform", "translate(-50%, -50%)");
 
     setTimeout(() => {
-        animation["classes"].play();
+        animation["illustrators"].play();
         setTimeout(() => {
-            animation["notification"].play();
+            animation["about"].play();
             setTimeout(() => {
-                animation["setting"].play();
+                animation["contact"].play();
             }, 100);
         }, 100);
     }, 100);
