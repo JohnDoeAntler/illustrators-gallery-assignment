@@ -6,6 +6,19 @@
     transform: translate(-50%, 0%);
 }
 
+#nav-bar{
+    max-width: 295px;
+    margin: 0;
+}
+
+.min-btn{
+    background-color: rgba(0, 0, 0, 0.0625);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 2px;
+}
+
 #grid-container{
     display: inline-grid;
     grid-template-columns: auto auto;

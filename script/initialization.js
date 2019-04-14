@@ -1,6 +1,6 @@
 var initialization = bodymovin.loadAnimation({
     wrapper: document.getElementById('initialization'),
-    animType: 'canvas',
+    animType: 'svg',
     loop: false,
     path: 'animation/initialization.json'
 });

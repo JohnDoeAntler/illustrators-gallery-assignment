@@ -1,0 +1,14 @@
+@font-face {
+    font-family: Agency FB;
+    src:local("../fonts/agency-fb.ttf");
+}
+
+@font-face {
+    font-family: Century Gothic, ;
+    src:local("../fonts/Century Gothic.ttf");
+}
+
+@font-face {
+    font-family: CenturyGothic;
+    src:local("../fonts/CenturyGothic.ttf");
+}

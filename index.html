@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>INDEX</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="css/font.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="css/default.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="css/click.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="css/particles-js.css" />
@@ -12,11 +13,22 @@
         <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="css/keyframe.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="css/ease.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="css/grid.css" />
     </head>
     <body>
         <!-- container js -->
-        <div id="particles-js" class="ease"></div> 
+        <div class="d-none d-x-block">
+            <div id="particles-js" class="ease"></div> 
+        </div>
         <div id="content" class="ease">
+            <div id="nav-bar" class="d-block d-x-none">
+                <div class="r">
+                    <div class="c-12 min-btn">ILLUSTRATOR-CLUB</div>
+                    <a href="" class="c-4 min-btn">1                    </a>
+                    <a href="" class="c-4 min-btn">1                    </a>
+                    <a href="" class="c-4 min-btn">1                    </a>
+                </div>
+            </div>
             <div id="grid-container">
                 <div id=profile class="ease flash">
                     <img id="icon" src="image/icon.png" class="ease"/>
@@ -27,7 +39,7 @@
                         <input type="button"    id="sign-up"    class="flash"       value="SIGN UP"/>
                     </a>
                 </div>
-                <div>
+                <div class="d-none d-x-block">
                     <div id="banner" class="flash"></div>
                     <div id="horizontal-grid-container">
                         <a id="illustrators"    class="flash" href="illustrators.html"></a>

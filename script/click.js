@@ -1,6 +1,6 @@
 var click = bodymovin.loadAnimation({
     wrapper: document.getElementById('click'),
-    animType: 'canvas',
+    animType: 'svg',
     autoplay: false,
     loop: false,
     path: 'animation/click.json'

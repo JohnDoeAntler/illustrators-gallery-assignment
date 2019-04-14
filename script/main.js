@@ -3,7 +3,7 @@ var animation = [];
 ["banner", "illustrators", "about", "contact"].forEach(x => {
     let tmp = bodymovin.loadAnimation({
         wrapper: document.getElementById(x),
-        animType: 'canvas',
+        animType: 'svg',
         autoplay: false,
         loop: false,
         path: `animation/${x}.json`
@@ -21,6 +21,7 @@ var animation = [];
         document.getElementById(x).addEventListener(y.name, function(){
             tmp.goToAndStop(0 + y.offset);
             tmp.playSegments([0 + y.offset, 59 + y.offset], true);
+            console.log(x);
         });
     });
 });
