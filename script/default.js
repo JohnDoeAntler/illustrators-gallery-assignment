@@ -1,5 +1,15 @@
 particlesJS.load('particles-js', 'script/include/particlesjs-config.json', function() {
     console.log('callback - particles.js config loaded');
+    if (window.innerWidth < 768){
+        pJSDom[0].pJS.particles.number.value = 50;
+        pJSDom[0].pJS.fn.particlesRefresh();
+    }else if (window.innerWidth < 992){
+        pJSDom[0].pJS.particles.number.value = 100;
+        pJSDom[0].pJS.fn.particlesRefresh();
+    }else if (window.innerWidth < 1200){
+        pJSDom[0].pJS.particles.number.value = 150;
+        pJSDom[0].pJS.fn.particlesRefresh();
+    }
 });
 
 var inputs = document.getElementsByTagName("input");
@@ -29,3 +39,16 @@ for (let i = 0; i < inputs.length; i++){
         });
     }
 }
+
+$(window).resize(() => {
+    if (window.innerWidth < 768){
+        pJSDom[0].pJS.particles.number.value = 50;
+        pJSDom[0].pJS.fn.particlesRefresh();
+    }else if (window.innerWidth < 992){
+        pJSDom[0].pJS.particles.number.value = 100;
+        pJSDom[0].pJS.fn.particlesRefresh();
+    }else if (window.innerWidth < 1200){
+        pJSDom[0].pJS.particles.number.value = 150;
+        pJSDom[0].pJS.fn.particlesRefresh();
+    }
+});
