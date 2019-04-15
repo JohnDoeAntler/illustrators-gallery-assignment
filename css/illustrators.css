@@ -42,7 +42,6 @@ input[type = "button"]{
     grid-template-columns: 1fr 9fr 9fr 9fr 1fr;
     grid-auto-rows: auto;
     justify-items: center;
-    max-width: 1300px;
 }
 
 #panel-right{
@@ -116,13 +115,17 @@ input[type = "button"]{
     height: 60%;
 }
 
-#title{
+#title, #min-title{
     font-family: Agency FB;
     background-color: rgba(0, 0, 0, 0.25);
     color: white;
     font-size: 36px;
     width: 640px;
     max-width: 640px;
+}
+
+#min-title{
+    margin-top: 20px;
 }
 
 u{
@@ -155,8 +158,74 @@ u{
     cursor: pointer;
 }
 
-#categories{
+#illustrations{
     margin-top: -288px;
     height: 100%;
     pointer-events: none;
+}
+
+@media (max-width: 1399px) {
+    #panel-left{
+        max-width: 400px;
+        width: 400px;
+    }
+
+    .item{
+        max-width: 35px;
+        width: 35px;
+    }
+    
+    .item:nth-child(3){
+        max-width: 260px;
+        width: 260px;
+    }
+}
+
+@media (max-width: 1199px) {
+    #grid-container{
+        grid-gap: 0px;
+        grid-template-columns: auto;
+    }
+
+    #panel-left{
+        max-width: 640px;
+        width: 640px;
+    }
+
+    .item{
+        max-width: 150px;
+        width: 150px;
+    }
+    
+    .item:nth-child(3){
+        max-width: 240px;
+        width: 240px;
+    }
+}
+
+@media (max-width: 768px) {
+    #grid-container{
+        grid-gap: 0px;
+        grid-template-columns: auto;
+    }
+
+    #panel-left{
+        max-width: 400px;
+        width: 400px;
+    }
+
+    .item{
+        max-width: 35px;
+        width: 35px;
+    }
+    
+    .item:nth-child(3){
+        max-width: 260px;
+        width: 260px;
+    }
+
+    #min-title, #min-desc{
+        min-width: 400px;
+        width: 400px;
+    }
 }

@@ -1,9 +1,9 @@
 let tmp = bodymovin.loadAnimation({
-    wrapper: document.getElementById("categories"),
+    wrapper: document.getElementById("illustrations"),
     animType: 'svg',
     autoplay: false,
     loop: false,
-    path: `animation/categories.json`
+    path: `animation/illustrations.json`
 });
 
 [{
@@ -32,16 +32,15 @@ var classes = [];
     classes.push({
         "title" :   $(x).attr('title'),
         "desc"  :   $(x).text(),
+        "src"   :   $(x).attr('src'),
         "url"   :   $(x).attr('url')
     });
     x.parentNode.removeChild(x);
 });
 
-var categories = [];
-
 let mod = (a, n) => a - (n * Math.floor(a/n));
 
-let itemlize = (index) => `<div class="item flash ease"><img class="item-img ease" src="${classes[mod(index, classes.length)].url}"/></div>`;
+let itemlize = (index) => `<div class="item flash ease"><img class="item-img ease" src="${classes[mod(index, classes.length)].src}"/></div>`;
 
 for (let i = 2; i >= 0; i--)
 {    
@@ -51,7 +50,7 @@ for (let i = 2; i >= 0; i--)
 let getIndex = () => {
     let arr = [...document.getElementsByClassName("item")];
     return idx = classes.findIndex(function (e) {
-        return e.url == $(arr[1].childNodes[0]).attr("src");
+        return e.src == $(arr[1].childNodes[0]).attr("src");
     });
 }
 
@@ -91,7 +90,10 @@ var reset = () => {
 let writePanel = () => {
     $("#title").text(classes[getIndex()].title);
     $("#desc").text(classes[getIndex()].desc);
-    $("#image").attr("src", classes[getIndex()].url);
+    $("#min-title").text(classes[getIndex()].title);
+    $("#min-desc").text(classes[getIndex()].desc);
+    $("#image").attr("src", classes[getIndex()].src);
+    $("#redirector").attr("href", classes[getIndex()].url)
 }
 
 let loadEventListener = () => {
@@ -103,7 +105,6 @@ let loadEventListener = () => {
 }
 
 $("body").bind("mousewheel", function(e){
-
     if (e.originalEvent.wheelDelta >= 0)
     {
         shiftLeft();

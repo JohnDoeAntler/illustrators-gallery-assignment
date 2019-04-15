@@ -19,25 +19,36 @@
         <!-- container js -->
         <div id="particles-js" class="ease"></div>
         <div id="content" class="ease">
-            <div id="nav-bar" class="d-block d-x-none">
+            <div id="nav-bar" class="d-block d-l-none d-x-none">
                 <div class="r">
                     <div class="c-12 min-btn">ILLUSTRATOR-CLUB</div>
-                    <a class="c-4 min-btn flash" href="illustrators.html">ILLUS...</a>
+                    <a class="c-4 min-btn flash" href="illustrators.html">ILLUSTRATORS</a>
                     <a class="c-4 min-btn flash" href="about.html">ABOUT</a>
                     <a class="c-4 min-btn flash" href="contact.html">CONTACT</a>
                 </div>
             </div>
             <div id="grid-container">
                 <div id=profile class="ease flash">
-                    <img id="icon" src="image/icon.png" class="ease"/>
-                    <input type="text"          id="email"      class="flash ease"  placeholder="EMAIL"  spellcheck="false"/>
-                    <input type="password"      id="password"   class="flash ease"  placeholder="PASSWORD"/>
-                    <input type="submit"        id="login"      class="flash"       value="LOGIN"/>
-                    <a href="account.html">
-                        <input type="button"    id="sign-up"    class="flash"       value="SIGN UP"/>
-                    </a>
+                    <!-- minimal login form-->
+                    <div class="d-none d-l-block d-x-none">
+                        <div class="vertical-text">
+                            <a href="account.html">
+                                LOGIN
+                            </a>
+                        </div>
+                    </div>
+                    <!-- normal login form -->
+                    <div class="d-block d-l-none d-x-block">
+                        <img id="icon" src="image/icon.png" class="ease"/>
+                        <input type="text"          id="email"      class="flash ease"  placeholder="EMAIL"  spellcheck="false"/>
+                        <input type="password"      id="password"   class="flash ease"  placeholder="PASSWORD"/>
+                        <input type="submit"        id="login"      class="flash"       value="LOGIN"/>
+                        <a href="account.html">
+                            <input type="button"    id="sign-up"    class="flash"       value="SIGN UP"/>
+                        </a>
+                    </div>
                 </div>
-                <div class="d-none d-x-block">
+                <div class="d-none d-l-block d-x-block">
                     <div id="banner" class="flash"></div>
                     <div id="horizontal-grid-container">
                         <a id="illustrators"    class="flash" href="illustrators.html"></a>
