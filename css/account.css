@@ -11,12 +11,20 @@
     margin-bottom: 10px;
 }
 
-input[type = "button"]{
+input[type = "button"], input[type = "submit"]{
     border: 0;
     background-color: rgba(0, 0, 0, 0.0625);
-    width: 127.5px;
     height: 35px;
+}
+
+input[type = "button"]{
+    width: 127.5px;
     margin: 0 10px 0 10px;
+}
+
+input[type = "submit"]{
+    width: 100%;
+    margin: 0;
 }
 
 #horizontal-line{
@@ -27,145 +35,65 @@ input[type = "button"]{
 
 #grid-container{
     display: inline-grid;
-    grid-template-columns: auto auto auto auto auto auto auto;
-    grid-gap: 20px;
+    grid-template-columns: auto auto auto auto;
     grid-auto-rows: auto;
+    grid-gap: 5px;
     justify-items: center;
-    background-color: rgba(0, 0, 0, 0.0625);
-    border: 20px solid transparent;
 }
 
-.picture-wrapper{
-    height: 720px;
-    max-height: 720px;
-    overflow: hidden;
-}
-
-.open{
-    width: 280px;
+#signin, #signup{
+    width: 300px;
+    height: 300px;
     cursor: pointer;
 }
 
-.close{
-    width: 20px;
-    cursor: auto;
+.form{    
+    width: 300px;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.0625);
+    
+    display: inline-grid;
+    grid-template-rows: auto auto auto;
+    grid-gap: 0;
+    justify-items: center;
+    
+    overflow: hidden;
 }
 
-.picture{
-    position: relative;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    transform: scale(1, 1);
-    opacity: .5;
+.input-wrapper{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.picture:hover{
-    transform: scale(1.2, 1.2);
-}
-
-.vertical-line{
-    width: 0;
-    max-width: 0;
-    height: 100%;
-    border: 1px solid rgba(0, 0, 0, 0.0625);
+.text-field{
+    border: 0;
+    border-bottom: 5px solid rgba(0, 0, 0, 0.0625);
+    background-color: transparent;
+    font-size: 14px;
 }
 
 .form{
-    width:      480px;
-    max-width:  480px;
-    height:     720px;
-    max-height: 720px;
-
-    display: flex;
+    width: 0;
 }
 
-#login-panel{
-    margin: auto auto;
-    width:      350px;
-    max-width:  350px;
+@media (max-width: 768px){
+    #signup{
+        width: 0;
+    }
+
+    #signup-form{
+        width: 300px;
+    }
+
+    #grid-container{
+        grid-template-columns: auto auto;
+        width: 300px;
+    }
 }
 
-#register-panel{
-    margin: auto auto;
-    width:      350px;
-    max-width:  350px;
-}
 
 .title{
-    color: rgba(0, 0, 0, 0.25);
-    font-size: 36px;
-    text-align: center;
-}
-
-.title::before, .title::after{
-    content: " - ";
-}
-
-.text{
-    width: 100%;
-
-    display: block;
-    border: 0;
-    border-bottom: 5px solid rgba(0, 0, 0, 0.0625);
-    background-color: transparent;
-
-    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif; 
-    font-size: 14px;
-
-    margin: auto;
-    margin-top:     50px;
-    margin-bottom:  50px;
-}
-
-.password{
-    width: 100%;
-
-    display: block;
-    border: 0;
-    border-bottom: 5px solid rgba(0, 0, 0, 0.0625);
-    background-color: transparent;
-
-    color: transparent;
-    font-size: 14px;
-
-    margin: auto;
-    margin-top:     50px;
-    margin-bottom:  50px;
-}
-
-.btn-group{
-    width: 100%;
-    max-width: 100%;
-    margin: auto;
-}
-
-.left{
-    float: left;
-}
-
-.right{
-    float: right;
-}
-
-.login{
-    border: 0;
-    background-color: rgba(0, 0, 0, 0.0625);
-    width: 127.5px;
-    height: 35px;
-    margin: auto;
-}
-
-.register{
-    border: 0;
-    background-color: rgba(0, 0, 0, 0.0625);
-    width: 127.5px;
-    height: 35px;
-    margin: auto;
-}
-
-#login-form{
-    width: 0;
-    opacity: 0;
-    pointer-events: none;
+    font-weight: 100;
 }

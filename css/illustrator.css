@@ -1,7 +1,156 @@
+
+
+#app-bar{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+input[type = "button"]{
+    border: 0;
+    background-color: rgba(0, 0, 0, 0.0625);
+    height: 35px;
+    width: 127.5px;
+    margin: 0 10px 0 10px;
+}
+
+#horizontal-line{
+    width: 100%;
+    height: 0;
+    border: 1px solid rgba(0, 0, 0, 0.0625);
+}
+
 #content{
     visibility: hidden;
     position: fixed;
     left: 50%;
     top: 50%;
     transform: translate(-50%, 0%);
+}
+
+#left-panel, #right-panel{
+    width: 70vw;
+    height: 70vh;
+    overflow: hidden;
+}
+
+#icon-wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#icon-border{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    border: 5px solid black;
+}
+
+#icon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.6;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#icon:hover{
+    width: 105%;
+    height: 105%;
+    cursor: pointer;
+}
+
+#blackscreen{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+}
+
+#illustrator-text{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 20px;
+}
+
+#illustrator-title::after{
+    content: "";
+    transform: translateY(-50%);
+    width: 10px;
+    height: 50px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -10;
+    transform: translate(5px, 25px);
+    background-color: cyan;
+}
+
+#illustrator-title{
+    background-color: rgba(0, 0, 0, 1);
+    color: white;
+    font-size: 50px;
+    padding: 0 10px 0 20px;
+    user-select: none;
+}
+
+#illustrator-title:hover{
+    font-size: 51px;
+}
+
+#illustrator-title:hover::after{
+    height: 51px;
+}
+
+#illustrator-desc{
+    font-size: 14px;
+    font-weight: bold;
+    user-select: none;
+    pointer-events: none;
+}
+
+#title{
+    background-color: rgba(0, 0, 0, 1);
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+
+#illustrations{
+    width: 100%;
+    height: 100%;
+    display: inline-grid;
+    grid-template-columns: auto;
+    grid-auto-rows: auto;
+    grid-gap: 5px;
+    justify-items: center;
+}
+
+.picture-wrapper{
+    width: 100%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.picture{
+    opacity: 0.6;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.picture:hover{
+    width: 105%;
+    height: 105%;
 }

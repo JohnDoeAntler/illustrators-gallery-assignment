@@ -1,7 +1,6 @@
 #click{
-    display: block;
+    display: none;
     position: fixed;
-    visibility: hidden;
     pointer-events: none;
     width: 300px;
     height: 300px;

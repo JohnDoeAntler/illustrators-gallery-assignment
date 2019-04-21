@@ -25,47 +25,41 @@
                 <div id="horizontal-line"></div>
             </div>
             <div id="grid-container">
-                <div id="register-img" class="picture-wrapper close ease">
-                    <img class="picture ease" src="image/login.jpg" alt=""/>
-                </div>
-    
-                <div class="vertical-line"></div>
-    
-                <div id="login-img" class="picture-wrapper open ease">
-                    <img class="picture ease" src="image/register.jpg" alt=""/>
-                </div>
-    
-                <div class="vertical-line"></div>
-    
-                <div id="login-form" class="form ease">
-                    <div id="login-panel">
-                        <div class="title">LOGIN FORM</div>
-                        <input type="text"              id="lgn-email"      class="text flash ease"         placeholder="EMAIL"  spellcheck="false"/>
-                        <input type="password"          id="lgn-password"   class="password flash ease"     placeholder="PASSWORD"/>
-                        <div class="btn-group">
-                            <input type="submit"        id="lgn-login"      class="login flash left"        value="LOGIN"/>
-                            <input type="button"        id="lgn-register"   class="register flash right"    value="REGISTER"/>
-                        </div>
+                <form id="signin-form" class="form ease" name="signin" action="post.html" method="GET">
+                    <h1 class="title">- SIGN IN -</h1>
+                    <div class="input-wrapper">
+                        <input type="text" name="in-username" id="in-username" class="text-field" placeholder="USERNAME">
                     </div>
-                </div>
-    
-                <div class="vertical-line"></div>
-                
-                <div id="register-form" class="form ease">
-                    <div id="register-panel">
-                        <div class="title">REGISTER FORM</div>
-                        <input type="text"              id="reg-username"   class="text flash ease"         placeholder="USERNAME"  spellcheck="false"/>
-                        <input type="text"              id="reg-email"      class="text flash ease"         placeholder="EMAIL"     spellcheck="false"/>
-                        <input type="password"          id="reg-password"   class="password flash ease"     placeholder="PASSWORD"/>
-                        <input type="password"          id="reg-confirm"    class="password flash ease"     placeholder="CONFIRM"/>
-                        <input type="text"              id="reg-icon"       class="text flash ease"         placeholder="ICON URL"  spellcheck="false"/>
-                        <input type="text"              id="reg-bio"        class="text flash ease"         placeholder="BIO"       spellcheck="false"/>
-                        <div class="btn-group">
-                            <input type="button"        id="reg-register"   class="register flash left"     value="REGISTER"/>
-                            <input type="submit"        id="reg-login"      class="login flash right"       value="LOGIN"/>
-                        </div>
+                    <div class="input-wrapper">
+                        <input type="password" name="in-password" id="in-password" class="text-field" placeholder="PASSWORD">
                     </div>
-                </div>
+                    <div class="input-wrapper">
+                        <input type="submit" name="in-submit" id="in-password" class="flash" value="SUBMIT">
+                    </div>
+                </form>
+                <div id="signin" class="flash"></div>
+                <div id="signup" class="flash"></div>
+                <form id="signup-form" class="form ease" name="signup" action="post.html" method="GET">
+                    <h1 class="title">- SIGN UP -</h1>
+                    <div class="input-wrapper">
+                        <input type="text" name="up-username" id="up-username" class="text-field" placeholder="USERNAME">
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="password" name="up-password" id="up-password" class="text-field" placeholder="PASSWORD">
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="password" name="up-repassword" id="up-repassword" class="text-field" placeholder="RETYPE-PASSWORD">
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="email" name="up-email" id="up-email" class="text-field" placeholder="EMAIL">
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="text" name="up-phone" id="up-phone" class="text-field" placeholder="PHONE NUMBER">
+                    </div>
+                    <div class="input-wrapper">
+                        <input type="submit" name="up-submit" id="up-password" class="flash" value="SUBMIT">
+                    </div>
+                </form>
             </div>
         </div>
         <div id="initialization"></div>

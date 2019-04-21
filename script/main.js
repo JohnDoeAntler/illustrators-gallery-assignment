@@ -12,7 +12,7 @@ var animation = [];
     animation[x] = tmp;
     
     [{
-        "name" : "mouseover",
+        "name" : "mouseenter",
         "offset" : 0
     },{
         "name" : "mouseleave",
@@ -21,7 +21,6 @@ var animation = [];
         document.getElementById(x).addEventListener(y.name, function(){
             tmp.goToAndStop(0 + y.offset);
             tmp.playSegments([0 + y.offset, 59 + y.offset], true);
-            console.log(x);
         });
     });
 });

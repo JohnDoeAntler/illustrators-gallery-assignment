@@ -7,7 +7,7 @@ let tmp = bodymovin.loadAnimation({
 });
 
 [{
-    "name" : "mouseover",
+    "name" : "mouseenter",
     "offset" : 0
 },{
     "name" : "mouseleave",

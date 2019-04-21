@@ -4,59 +4,60 @@ setTimeout(() => {
     $("#content").css("transform", "translate(-50%, -50%)");
 }, 1600);
 
-var isLogin = false;
+var animation = [];
 
-function login(){
-    $("#login-img").addClass("close")
-        .removeClass("open");
-    $("#register-img").addClass("open")
-        .removeClass("close");
+["signin", "signup"].forEach(x => {
+    let tmp = bodymovin.loadAnimation({
+        wrapper: document.getElementById(x),
+        animType: 'svg',
+        autoplay: false,
+        loop: false,
+        path: `animation/${x}.json`
+    });
 
-    $("#register-form").css("pointer-events", "none")
-        .css("opacity", "0")
-        .css("width", 0)
-        .css("max-width", 0);
-
-    $("#login-form").css("pointer-events", "auto")
-        .css("opacity", "1")
-        .css("width", "480px")
-        .css("max-width", "480px");
-
-    $("#lgn-password").val($("#reg-password").val());
-    $("#lgn-email").val($("#reg-email").val());
-
-    isLogin = true;
-}
-
-function register(){
-    $("#login-img").addClass("open")
-        .removeClass("close");
-    $("#register-img").addClass("close")
-        .removeClass("open");
+    animation[x] = tmp;
     
-    $("#login-form").css("pointer-events", "none")
-        .css("opacity", "0")
-        .css("width", 0)
-        .css("max-width", 0);
+    [{
+        "name" : "mouseenter",
+        "offset" : 0
+    },{
+        "name" : "mouseleave",
+        "offset" : 60
+    }].forEach(y => {
+        document.getElementById(x).addEventListener(y.name, function(){
+            tmp.goToAndStop(0 + y.offset);
+            tmp.playSegments([0 + y.offset, 59 + y.offset], true);
+        });
+    });
+});
 
-    $("#register-form").css("pointer-events", "auto")
-        .css("opacity", "1")
-        .css("width", "480px")
-        .css("max-width", "480px");
+document.getElementById("signin").addEventListener("click", signin);
+document.getElementById("signup").addEventListener("click", signup);
 
-    $("#reg-password").val($("#lgn-password").val());
-    $("#reg-confirm").val($("#lgn-password").val());
-    $("#reg-email").val($("#lgn-email").val());
+function signin () {
+    $("#signin").css("width", 0);
+    $("#signin").css("opacity", 0);
 
-    isLogin = false;
+    $("#signin-form").css("width", "300px");
+    $("#signin-form").css("opacity", 1);
+
+    $("#signup").css("width", "300px");
+    $("#signup").css("opacity", 1);
+
+    $("#signup-form").css("width", 0);
+    $("#signup-form").css("opacity", 0);
 }
 
-$("#register-img").on("click", register);
-$("#login-img").on("click", login);
-$("#lgn-register").on("click", register);
-$("#reg-login").on("click", login);
+function signup () {
+    $("#signup").css("width", 0);
+    $("#signup").css("opacity", 0);
 
-$(window).bind("mousewheel", function(e){
-    if (isLogin) register();
-    else login();
-});
+    $("#signup-form").css("width", "300px");
+    $("#signup-form").css("opacity", 1);
+
+    $("#signin").css("width", "300px");
+    $("#signin").css("opacity", 1);
+
+    $("#signin-form").css("width", 0);
+    $("#signin-form").css("opacity", 0);
+}

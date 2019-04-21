@@ -1,0 +1,186 @@
+#switchAnimation{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    width:  200px;
+    height: 200px;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 1003;
+}
+
+#nav-bar{
+    opacity: 0;
+    position: fixed;
+    top: 60%;
+    left: 0%;
+    transform: translate(0,-50%);
+    z-index: 1000;
+}
+
+#screen-blocker{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 1;
+    z-index: 1002;
+}
+
+#nav-bar > ul > a > li{
+    text-transform: uppercase;
+    list-style-type: none;
+    padding: 0px 10px;
+    margin-bottom: 10px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    color: black;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#nav-bar > ul > a > li:hover{
+    list-style-type: armenian;
+    padding-left: 30px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+#nav-bar > ul > a > li:hover::before{
+    content: "> ";
+}
+
+#min-index:hover::after, #min-about:hover::after, #min-contact:hover::after{
+    content: " page";
+}
+
+#content{
+    visibility: hidden;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 0%);
+    width: 800px;
+    min-width: 800px;
+}
+
+#center-line{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2px;
+    height: 610px;
+    background-color: rgba(0, 0, 0, 0.125);
+}
+
+#icon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+}
+
+#icon:hover{
+    width: 105%;
+    height: 105%;
+    cursor: pointer;
+}
+
+#icon-border{
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(calc(0% - 20px), -50%);
+    width: 400px;
+    height: 600px;
+    border: 3px solid black;
+}
+
+#icon-wrapper{
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(calc(0% - 15px), -50%);
+    width: 410px;
+    height: 610px;
+    overflow: hidden;
+}
+
+#left-panel, #right-panel{
+    min-width: 400px;
+    width: 400px;
+    height: 610px;
+}
+
+#right-panel{
+    pointer-events: none;
+}
+
+#title{
+    background-color: rgba(0, 0, 0, 0.25);
+    color: white;
+    font-family: Agency FB;
+    padding-left: 10px;
+    font-size: 36px;
+    margin-bottom: 10px;
+    pointer-events: all;
+    user-select: none;
+}
+
+#desc{
+    line-height: 30px;
+    font-size: 12px;
+    user-select: none;
+}
+
+#bottom-line{
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 992px){
+
+    #icon-border{
+        right: 50%;
+        transform: translate(50%, -50%);
+    }
+
+    #icon-wrapper{
+        right: 50%;
+        transform: translate(50%, -50%);
+    }
+
+    #right-panel{
+        transform: translate(-50%, 25%);
+    }
+
+    #desc{
+        color: white;
+    }
+}
+
+@media (max-width: 768px){
+    #icon-border{
+        width: 300px;
+    }
+
+    #icon-wrapper{
+        width: 310px;
+    }
+    #right-panel{
+        min-width: 300px;
+        width: 300px;
+        max-width: 300px;
+        transform: translate(-50%, 15%);
+    }
+
+    #desc{
+        line-height: 25px;
+    }
+}

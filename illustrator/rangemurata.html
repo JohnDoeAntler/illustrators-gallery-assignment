@@ -1,43 +1,98 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>INDEX</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<base href="../">
-        <link rel="stylesheet" type="text/css" media="screen" href="css/font.css" />
-        <link rel="stylesheet" type="text/css" media="screen" href="css/default.css" />
-        <link rel="stylesheet" type="text/css" media="screen" href="css/click.css" />
-        <link rel="stylesheet" type="text/css" media="screen" href="css/particles-js.css" />
-        <link rel="stylesheet" type="text/css" media="screen" href="css/initialization.css" />
-        <link rel="stylesheet" type="text/css" media="screen" href="css/illustrator.css" />
-        <link rel="stylesheet" type="text/css" media="screen" href="css/keyframe.css" />
-        <link rel="stylesheet" type="text/css" media="screen" href="css/ease.css" />
-    </head>
-    <body>
-        <!-- container js -->
-        <div id="particles-js" class="ease"></div> 
-        <div id="content" class="ease">
-            testing
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>INDEX</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="../">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/font.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/default.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/click.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/particles-js.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/initialization.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/illustrator.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/keyframe.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/ease.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/grid.css" />
+</head>
+
+<body>
+    <!-- container js -->
+    <div id="particles-js" class="ease"></div>
+    <div id="content" class="ease">
+        <div id="app-bar">
+            <a href="index.html">
+                <input id="index-btn" class="flash" type="button" value="INDEX"/>
+            </a>
+            <div id="horizontal-line"></div>
         </div>
-        <div id="initialization"></div>
-        <div id="click"></div>
-        <!-- jquery js -->
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-        <!-- bodymovin js -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.4.2/lottie.min.js"></script>
-        <!-- particle js -->
-        <script src="script/include/particles.min.js"></script> 
-        <!-- default js -->
-        <script src="script/default.js"></script>
-        <!-- intitialization js -->
-        <script src="script/initialization.js"></script>
-        <!-- click js -->
-        <script src="script/click.js"></script>
-        <!-- main js -->
-        <script src="script/illustrator.js"></script>
-        <!-- content js-->
-        <script src="script/content.js"></script>
-    </body>
+        <div class="r">
+            <div id="left-panel" class="c-6">
+                <div id="icon-border"></div>
+                <div id="icon-wrapper">
+                    <img id="icon" class="ease" src="../image/illustrators/JPRM/12938712.jpg" alt="">
+                    <div id="blackscreen" class="ease"></div>
+                </div>
+                <div id="illustrator-text">
+                    <span id="illustrator-title" class="flash ease">RANGE MURATA</span>
+                    <div id="illustrator-desc">Pellentesque massa velit, condimentum eu velit id, vulputate elementum
+                        metus. Nunc quam eros, ultricies a nibh vel, blandit fringilla velit. Aenean sit amet tristique
+                        orci. Pellentesque dolor sapien, pellentesque non ligula nec, condimentum posuere erat. Nunc
+                        lorem augue, tempus sit amet nulla sed, ornare feugiat augue. Mauris accumsan justo quis ipsum
+                        molestie, ut accumsan neque facilisis. Praesent porta, nisl nec mollis pretium, purus est
+                        accumsan magna, a placerat quam erat at lacus.</div>
+                </div>
+            </div>
+            <div id="right-panel" class="c-6">
+                <div id="illustrations">
+                    <div id="title">
+                        <h1>ILLUSTRATIONS</h1>
+                    </div>
+                    <div class="picture-wrapper ease">
+                        <img class="picture ease" src="../image/illustrators/JPRM/8d0dfd3c8788ff046aa55b52b657e09b.jpg" alt="">
+                    </div>
+                    <div class="picture-wrapper ease">
+                        <img class="picture ease" src="../image/illustrators/JPRM/dwalkd.jpg" alt="">
+                    </div>
+                    <div class="picture-wrapper ease">
+                        <img class="picture ease" src="../image/illustrators/JPRM/dwlak.jpg" alt="">
+                    </div>
+                    <div class="picture-wrapper ease">
+                        <img class="picture ease" src="../image/illustrators/JPRM/f6plO1k.jpg" alt="">
+                    </div>
+                    <div class="picture-wrapper ease">
+                        <img class="picture ease" src="../image/illustrators/JPRM/ioAYSJT.jpg" alt="">
+                    </div>
+                    <div class="picture-wrapper ease">
+                        <img class="picture ease" src="../image/illustrators/JPRM/jpNXv7Z.jpg" alt="">
+                    </div>
+                    <div class="picture-wrapper ease">
+                        <img class="picture ease" src="../image/illustrators/JPRM/walkdj.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="initialization"></div>
+    <div id="click"></div>
+    <!-- jquery js -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- bodymovin js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.4.2/lottie.min.js"></script>
+    <!-- particle js -->
+    <script src="script/include/particles.min.js"></script>
+    <!-- default js -->
+    <script src="script/default.js"></script>
+    <!-- intitialization js -->
+    <script src="script/initialization.js"></script>
+    <!-- click js -->
+    <script src="script/click.js"></script>
+    <!-- main js -->
+    <script src="script/illustrator.js"></script>
+    <!-- content js-->
+    <script src="script/content.js"></script>
+</body>
+
 </html>

@@ -10,17 +10,46 @@
         <link rel="stylesheet" type="text/css" media="screen" href="css/click.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="css/particles-js.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="css/initialization.css" />
-        <link rel="stylesheet" type="text/css" media="screen" href="css/illustrator.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="css/about.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="css/keyframe.css" />
         <link rel="stylesheet" type="text/css" media="screen" href="css/ease.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="css/grid.css" />
     </head>
     <body>
         <!-- container js -->
-        <div id="particles-js" class="ease"></div> 
+        <div id="particles-js" class="ease"></div>
+        <div id="nav-bar" class="ease">
+            <ul>
+                <a href="index.html">
+                    <li class="ease d-none d-m-block" id="min-index">index</li>
+                </a>
+                <a href="#">
+                    <li class="ease d-none d-m-block" onclick="switchContent('about')" id="min-about">about</li>
+                </a>
+                <a href="#">
+                    <li class="ease d-none d-m-block" onclick="switchContent('contact')" id="min-contact">contact</li>
+                </a>
+            </ul>
+        </div>
         <div id="content" class="ease">
-            testing
+            <div id="center-line" class="d-none d-l-block" ></div>
+            <div class="r">
+                <div id="left-panel" class="c-l-6 c-x-6 ease">
+                    <div id="icon-border" class="ease"></div>
+                    <div id="icon-wrapper" class="ease">
+                        <div id="screen-blocker" class="ease"></div>
+                        <img id="icon" class="ease" src="./image/about.png" alt="">
+                    </div>
+                </div>
+                <div id="right-panel" class="c-l-6 c-6 ease">
+                    <div id="title" class="flash"></div>
+                    <div id="desc"></div>
+                    <div id="bottom-line" class="d-block d-l-none"></div>
+                </div>
+            </div>
         </div>
         <div id="initialization"></div>
+        <div id="switchAnimation"></div>
         <div id="click"></div>
         <!-- jquery js -->
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -35,7 +64,7 @@
         <!-- click js -->
         <script src="script/click.js"></script>
         <!-- main js -->
-        <script src="script/illustrator.js"></script>
+        <script src="script/about.js"></script>
         <!-- content js-->
         <script src="script/content.js"></script>
     </body>

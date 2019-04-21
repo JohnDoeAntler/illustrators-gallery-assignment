@@ -15,7 +15,7 @@ document.addEventListener('contextmenu', function(event) {
 document.addEventListener('click', showCursorWave);
 
 function showCursorWave(event) {
-    $("#click").css("visibility", "visible");
+    $("#click").css("display", "block");
     $("#click").css("left", event.clientX - 150 + "px");
     $("#click").css("top", event.clientY - 150 + "px");
     click.goToAndStop(0);
@@ -23,5 +23,5 @@ function showCursorWave(event) {
 }
 
 click.addEventListener("complete", function(){
-    $("#click").css("visibility", "hidden");
+    $("#click").css("display", "none");
 });
