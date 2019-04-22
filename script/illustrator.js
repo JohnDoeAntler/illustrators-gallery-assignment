@@ -14,6 +14,8 @@ setTimeout(() => {
         $("#icon").css("opacity", 0);
         $("#blackscreen").css("opacity", 1);
 
+        switchAnimation.goToAndPlay(0);
+
         setTimeout(() => {
             $("#icon").css("opacity", 0.6);
             $("#blackscreen").css("opacity", 0);

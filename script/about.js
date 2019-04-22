@@ -65,6 +65,10 @@ document.getElementById("icon").addEventListener("click", () => {
     switchContent(currentPage == "about" ? "contact" : "about");
 })
 
+$("body").bind("mousewheel", function(e){
+    switchContent(currentPage == "about" ? "contact" : "about");
+});
+
 $("#screen-blocker").css('opacity', 0);
 
 rewritePanel(page);

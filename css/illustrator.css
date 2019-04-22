@@ -1,5 +1,3 @@
-
-
 #app-bar{
     width: 100%;
     margin-bottom: 10px;
@@ -40,7 +38,7 @@ input[type = "button"]{
     transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 #icon-border{
@@ -62,6 +60,7 @@ input[type = "button"]{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    user-select: none;
 }
 
 #icon:hover{
@@ -75,6 +74,7 @@ input[type = "button"]{
     height: 100%;
     background-color: black;
     opacity: 0;
+    pointer-events: none;
 }
 
 #illustrator-text{
@@ -82,6 +82,14 @@ input[type = "button"]{
     left: 0;
     bottom: 0;
     padding: 20px;
+}
+
+#illustrator-title{
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    font-size: 50px;
+    padding: 0 10px 0 20px;
+    user-select: none;
 }
 
 #illustrator-title::after{
@@ -97,14 +105,6 @@ input[type = "button"]{
     background-color: cyan;
 }
 
-#illustrator-title{
-    background-color: rgba(0, 0, 0, 1);
-    color: white;
-    font-size: 50px;
-    padding: 0 10px 0 20px;
-    user-select: none;
-}
-
 #illustrator-title:hover{
     font-size: 51px;
 }
@@ -118,6 +118,10 @@ input[type = "button"]{
     font-weight: bold;
     user-select: none;
     pointer-events: none;
+    text-align: justify;
+    text-justify: inter-word;
+    color: white;
+    text-shadow: 0 0 10px #000;
 }
 
 #title{
@@ -125,6 +129,7 @@ input[type = "button"]{
     color: white;
     width: 100%;
     text-align: center;
+    user-select: none;
 }
 
 #illustrations{
@@ -153,4 +158,45 @@ input[type = "button"]{
 .picture:hover{
     width: 105%;
     height: 105%;
+}
+
+@media (max-width: 992px){
+    #left-panel, #right-panel{
+        width: 80vw;
+        height: 80vh;
+        overflow: hidden;
+    }
+
+    #title{
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 768px){
+    #illustrator-title{
+        font-size: 30px;
+        padding: 0 0 0 20px;
+    }
+
+    #illustrator-title::after{
+        height: 25px;
+    }
+    
+    #illustrator-title:hover{
+        font-size: 31px;
+    }
+    
+    #illustrator-title:hover::after{
+        height: 26px;
+    }
+    
+    #left-panel, #right-panel{
+        width: 90vw;
+        height: 90vh;
+        overflow: hidden;
+    }
+
+    #title{
+        font-size: 7px;
+    }
 }

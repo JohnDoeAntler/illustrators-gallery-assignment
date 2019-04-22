@@ -26,22 +26,29 @@ var animation = [];
 });
 
 setTimeout(() => {
-    animation["banner"].play();
-
     $("#content").css("visibility", "visible");
     $("#particles-js").css("opacity", "1");
     $("#content").css("transform", "translate(-50%, -50%)");
+    playAnimation();
+}, 1600);
+
+$("body").bind("mousewheel", function(e){
+    playAnimation();
+});
+
+let playAnimation = () => {
+    animation["banner"].goToAndPlay(0);
 
     setTimeout(() => {
-        animation["illustrators"].play();
+        animation["illustrators"].goToAndPlay(0);
         setTimeout(() => {
-            animation["about"].play();
+            animation["about"].goToAndPlay(0);
             setTimeout(() => {
-                animation["contact"].play();
+                animation["contact"].goToAndPlay(0);
             }, 100);
         }, 100);
     }, 100);
-}, 1600);
+}
 
 // initialization.addEventListener('complete', () =>{
 // });
