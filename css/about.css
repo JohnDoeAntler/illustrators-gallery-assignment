@@ -2,6 +2,28 @@
     transform: translate(-50%, -150%);
 }
 
+#app-bar{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, calc(-50% - 330px));
+    width: 310px;
+}
+
+input[type = "button"]{
+    border: 0;
+    background-color: rgba(0, 0, 0, 0.0625);
+    height: 35px;
+    width: 127.5px;
+    margin: 0 10px 0 10px;
+}
+
+#horizontal-line{
+    width: 100%;
+    height: 0;
+    border: 1px solid rgba(0, 0, 0, 0.0625);
+}
+
 #nav-bar{
     opacity: 0;
     position: fixed;
@@ -166,6 +188,7 @@
     #icon-wrapper{
         width: 310px;
     }
+
     #right-panel{
         min-width: 300px;
         width: 300px;

@@ -93,7 +93,9 @@ let writePanel = () => {
     $("#min-title").text(classes[getIndex()].title);
     $("#min-desc").text(classes[getIndex()].desc);
     $("#image").attr("src", classes[getIndex()].src);
-    $("#redirector").attr("href", classes[getIndex()].url)
+    [...document.getElementsByClassName("redirector")].forEach(element =>{
+        $(element).attr("href", classes[getIndex()].url);
+    });
 }
 
 let loadEventListener = () => {

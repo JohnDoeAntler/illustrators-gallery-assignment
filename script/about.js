@@ -25,13 +25,13 @@ var rewritePanel = (string) => {
         name : "about",
         src : "./image/about.png",
         title : "- ABOUT US -",
-        desc : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras posuere sodales dolor vitae aliquet. Nunc nec ex mollis, tempor est ut, imperdiet est. Donec at ex a justo lacinia consectetur quis quis dui. Quisque ullamcorper at erat quis facilisis. Morbi ac luctus leo. Sed pellentesque metus egestas libero varius lacinia. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus maximus dictum ex nec pretium. Fusce ac augue tincidunt, condimentum nibh et, cursus sapien. Sed mauris quam, faucibus sed efficitur et, sollicitudin eget purus. Aenean nec massa nunc. Pellentesque venenatis nisl vitae auctor sodales. Maecenas eu consequat nulla, ut placerat eros. In nec tortor non tellus rhoncus facilisis et vitae orci."
+        desc : "We are the illustrators club. Nowadays, visual culture, illustration and modern art is no longer receiving attention from the general public. Hence, this illustration club has created for our schoolmate to be in touch with the illustration. We would like to introduce the different region of illustrators, the style of their illustration and their background stories. It is hoped that our club can gain your interest in illustration and make your own stunning illustration."
     },
     {
         name : "contact",
         src : "./image/contact.jpg",
         title : "- CONTACT US -",
-        desc : "Aliquam quis congue justo. Nam suscipit ipsum in quam placerat lacinia non eget augue. Curabitur imperdiet id odio a dictum. Suspendisse iaculis consequat ultricies. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed ante dui, rhoncus vel massa a, vestibulum auctor arcu. Quisque non erat eu tortor viverra fermentum vitae sit amet ligula. Nulla neque nisi, laoreet at congue eget, volutpat sed nisl. Vivamus fringilla, sapien ut semper euismod, augue ipsum venenatis neque, eget semper dolor ligula quis enim. Fusce lobortis posuere scelerisque. Aenean vestibulum libero sodales pretium varius. Praesent tincidunt quis lacus ut venenatis. In eget dui mollis, sagittis lacus sit amet, rutrum nibh. Cras scelerisque libero eu fermentum porttitor. Suspendisse potenti."
+        desc : "Do you need help? Have any questions you would like answered about illustrators and illustrations? Please feel free to visit our club in school or send us an email via the school network system. If you want to join our illustration club, just finish the member application form either by paper or online.Email: 2019illustrationclub@school.com "
     }].forEach(element => {
         if (element.name == string){
             $("#icon").attr("src", element.src);

@@ -130,6 +130,8 @@ u{
     border-bottom: 5px solid rgba(0, 0, 0, 0.125);
     line-height: 30px;
     font-size: 12px;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 #wrapper{
